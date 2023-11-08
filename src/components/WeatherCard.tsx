@@ -1,10 +1,11 @@
 import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import { WeatherCardProps } from "../types/types";
+import "./WeatherCard.scss";
 
 const WeatherCard: React.FC<WeatherCardProps> = ({ weather }) => {
   return (
-    <Card>
+    <Card className="weather-card">
       <CardContent>
         <Typography variant="h5" component="div">
           {weather.name}, {weather.country}

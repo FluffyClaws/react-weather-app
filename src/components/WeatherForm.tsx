@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Box } from "@mui/material";
 import { WeatherFormProps } from "../types/types";
+import "./WeatherForm.scss";
 
 const WeatherForm: React.FC<WeatherFormProps> = ({ onCitySubmit }) => {
   const [city, setCity] = useState("");
@@ -13,7 +14,7 @@ const WeatherForm: React.FC<WeatherFormProps> = ({ onCitySubmit }) => {
   };
 
   return (
-    <div>
+    <Box className="weather-form">
       <TextField
         label="Enter the city"
         variant="outlined"
@@ -28,7 +29,7 @@ const WeatherForm: React.FC<WeatherFormProps> = ({ onCitySubmit }) => {
       <Button variant="contained" onClick={handleSubmit}>
         Submit
       </Button>
-    </div>
+    </Box>
   );
 };
 
