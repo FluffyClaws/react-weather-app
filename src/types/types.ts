@@ -4,6 +4,9 @@ export interface WeatherResponse {
     pressure: number;
     humidity: number;
   };
+  sys: {
+    country: string;
+  };
   name: string;
   weather: Array<{ description: string; icon: string }>;
   wind: {
@@ -15,6 +18,7 @@ export interface WeatherResponse {
 export interface WeatherData {
   temp: number;
   name: string;
+  country: string;
   description: string;
   windDeg: number;
   windSpeed: number;
@@ -29,3 +33,7 @@ export interface WeatherCardProps {
 export interface WeatherFormProps {
   onCitySubmit: (city: string) => void;
 }
+export type LastViewedCitiesProps = {
+  onSelectCity: (city: string) => void;
+  lastViewedCities: string[];
+};
