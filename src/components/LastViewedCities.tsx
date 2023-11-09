@@ -21,8 +21,13 @@ const LastViewedCities: React.FC<LastViewedCitiesProps> = ({
   return (
     <List className="last-viewed-cities">
       {lastViewed.map((city, index) => (
-        <ListItem button key={index} onClick={() => onSelectCity(city)}>
-          <ListItemText primary={city} />
+        <ListItem
+          className="last-viewed-cities__item"
+          button
+          key={index}
+          onClick={() => onSelectCity(city)}
+        >
+          <ListItemText primary={city} className="last-viewed-cities__text" />
         </ListItem>
       ))}
     </List>

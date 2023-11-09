@@ -16,6 +16,7 @@ const WeatherForm: React.FC<WeatherFormProps> = ({ onCitySubmit }) => {
   return (
     <Box className="weather-form">
       <TextField
+        className="weather-form__input"
         label="Enter the city"
         variant="outlined"
         value={city}
@@ -26,7 +27,11 @@ const WeatherForm: React.FC<WeatherFormProps> = ({ onCitySubmit }) => {
           }
         }}
       />
-      <Button variant="contained" onClick={handleSubmit}>
+      <Button
+        className="weather-form__submit"
+        variant="contained"
+        onClick={handleSubmit}
+      >
         Submit
       </Button>
     </Box>

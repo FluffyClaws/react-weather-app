@@ -1,3 +1,56 @@
-.last-viewed-cities {
+html .last-viewed-cities {
   margin-top: 20px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+
+  @media (min-width: 480px) {
+    &__text {
+      text-align: left;
+    }
+    &_item {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+      width: calc(50% - 10px);
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+    }
+  }
 }

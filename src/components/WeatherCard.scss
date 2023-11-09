@@ -1,8 +1,86 @@
-.weather-card {
-  max-width: 300px;
-  margin: auto;
+html .weather-card {
+  max-width: inherit;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  &__temperature {
+    font-weight: bold;
+    order: 1;
+  }
+
+  &__icon {
+    width: 50px;
+    order: 2;
+    margin-top: 0.5rem;
+  }
+
+  &__description,
+  &__pressure,
+  &__humidity,
+  &__wind-speed,
+  &__wind-direction {
+    color: #666;
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  @media (min-width: 480px) {
+    &__details {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__temperature {
+      order: 0;
+      margin-right: 1rem;
+    }
+
+    &__icon {
+      order: 0;
+      margin-top: 0;
+    }
+  }
 
   @media (min-width: 768px) {
-    max-width: none;
+    max-width: 500px;
+    padding: 1rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__icon {
+      margin-left: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 600px;
+    padding: 1.5rem;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__details {
+      margin: 1.5rem 0;
+    }
   }
 }
