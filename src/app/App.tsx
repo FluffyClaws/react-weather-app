@@ -18,6 +18,7 @@ const App: React.FC = () => {
         checked={theme === "dark"}
         onChange={toggleTheme}
         name="themeToggle"
+        className="theme-switch"
         inputProps={{ "aria-label": "theme toggle" }}
       />
       <WeatherForm onCitySubmit={handleCitySubmit} />

@@ -3,11 +3,15 @@ $color-text-light: #333;
 $color-text-dark: #fff;
 $color-text-muted: #666;
 $color-background-light: #fff;
-$color-background-dark: #1e1e1e;
+$color-background-dark: #404040;
 $color-background-form: #ffffff;
 $color-background-hover: #eaeaea;
+$color-background-hover-dark: #7d7d7d;
+
 $color-button: #005a9c;
+$color-button-dark: #48494a;
 $color-button-hover: #004080;
+$color-button-hover-dark: #7d7d7d;
 $color-border: #ddd;
 
 // Shadows
@@ -17,7 +21,6 @@ $shadow-form: 0 4px 8px rgba(0, 0, 0, 0.1);
 $shadow-list: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 // Background images
-// Add these lines to your variables.scss
 $background-image-light: url("/images/background_light.jpg");
 $background-image-dark: url("/images/background_dark.jpg");
 

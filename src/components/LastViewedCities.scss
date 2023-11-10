@@ -1,3 +1,20 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+html [data-theme="dark"] {
+  .last-viewed-cities {
+    background-color: $color-background-dark;
+    box-shadow: $shadow-card-dark;
+    &__text {
+      color: $color-text-dark;
+    }
+    &__item:hover {
+      border-radius: 4px;
+      background-color: $color-background-hover-dark;
+    }
+  }
+}
+
 html .last-viewed-cities {
   margin-top: 20px;
   background-color: #f7f7f7;
@@ -47,13 +64,12 @@ html .last-viewed-cities {
 
     &__item {
       width: calc(50% - 10px);
-      border-bottom: 1px solid #ddd; /* Ensure border is applied by default */
+      border-bottom: 1px solid #ddd;
 
       &:nth-child(odd) {
         margin-right: 20px;
       }
 
-      /* Remove border from the last two items */
       &:nth-last-child(-n + 2) {
         border-bottom: none;
       }

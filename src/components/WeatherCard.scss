@@ -1,3 +1,20 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+html [data-theme="dark"] {
+  .weather-card {
+    background-color: $color-background-dark;
+    color: $color-text-dark;
+    &__description,
+    &__pressure,
+    &__humidity,
+    &__wind-speed,
+    &__wind-direction {
+      color: $color-text-dark;
+    }
+  }
+}
+
 html .weather-card {
   max-width: inherit;
   margin: 20px auto;

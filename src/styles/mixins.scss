@@ -17,12 +17,12 @@
     --text-color: #{$color-text-light};
     --card-shadow: #{$shadow-card-light};
     color: var(--text-color);
-    background-image: url("../../public/images/background_light.jpg"); // Direct URL
+    background-image: url("../../public/images/background_light.jpg");
   } @else if $theme == "dark" {
     --text-color: #{$color-text-dark};
     --card-shadow: #{$shadow-card-dark};
     color: var(--text-color);
-    background-image: url("../../public/images/background_dark.jpg"); // Direct URL
+    background-image: url("../../public/images/background_dark.jpg");
   }
 }
 
