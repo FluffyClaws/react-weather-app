@@ -1,4 +1,4 @@
-.weather-form {
+html .weather-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,7 @@
   &__submit {
     height: 56px;
     box-sizing: border-box;
-
+    margin-bottom: 10px;
     width: calc(100% - 40px);
     padding: 10px 20px;
     font-size: 1rem;
@@ -30,7 +30,6 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
     &:hover {
       background-color: #004080;
     }
@@ -46,6 +45,8 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
+    align-items: baseline;
+
     justify-content: space-between;
     padding: 20px;
 

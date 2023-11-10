@@ -47,9 +47,15 @@ html .last-viewed-cities {
 
     &__item {
       width: calc(50% - 10px);
+      border-bottom: 1px solid #ddd; /* Ensure border is applied by default */
 
       &:nth-child(odd) {
         margin-right: 20px;
+      }
+
+      /* Remove border from the last two items */
+      &:nth-last-child(-n + 2) {
+        border-bottom: none;
       }
     }
   }

@@ -1,0 +1,65 @@
+@mixin flex-center($direction: column, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: center;
+}
+
+@mixin theme-properties($theme: "light") {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    background-image 0.3s ease;
+
+  @if $theme == "light" {
+    --text-color: #{$color-text-light};
+    --card-shadow: #{$shadow-card-light};
+    color: var(--text-color);
+    background-image: url("../../public/images/background_light.jpg"); // Direct URL
+  } @else if $theme == "dark" {
+    --text-color: #{$color-text-dark};
+    --card-shadow: #{$shadow-card-dark};
+    color: var(--text-color);
+    background-image: url("../../public/images/background_dark.jpg"); // Direct URL
+  }
+}
+
+body {
+  @include theme-properties(light);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+[data-theme="dark"] {
+  @include theme-properties(dark);
+}
+
+@mixin responsive-width($width: 100%) {
+  max-width: $width;
+  width: $width;
+  margin: 20px auto;
+}
+
+@mixin button-style {
+  height: 56px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: $color-button;
+  color: $color-text-dark;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+}

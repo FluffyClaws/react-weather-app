@@ -1,0 +1,27 @@
+// Color palette
+$color-text-light: #333;
+$color-text-dark: #fff;
+$color-text-muted: #666;
+$color-background-light: #fff;
+$color-background-dark: #1e1e1e;
+$color-background-form: #ffffff;
+$color-background-hover: #eaeaea;
+$color-button: #005a9c;
+$color-button-hover: #004080;
+$color-border: #ddd;
+
+// Shadows
+$shadow-card-light: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$shadow-card-dark: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+$shadow-form: 0 4px 8px rgba(0, 0, 0, 0.1);
+$shadow-list: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Background images
+// Add these lines to your variables.scss
+$background-image-light: url("/images/background_light.jpg");
+$background-image-dark: url("/images/background_dark.jpg");
+
+// Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
