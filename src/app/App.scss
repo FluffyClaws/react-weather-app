@@ -33,11 +33,11 @@
         color: $color-background-light;
       }
       .MuiSwitch-colorPrimary.Mui-checked .MuiTouchRipple-child {
-        background-color: white !important;
+        background-color: $color-background-light;
       }
 
       .MuiSwitch-colorPrimary.Mui-checked .MuiTouchRipple-child:after {
-        background-color: white !important;
+        background-color: $color-background-light;
       }
 
       .Mui-focusVisible {

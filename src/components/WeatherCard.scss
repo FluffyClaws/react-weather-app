@@ -5,6 +5,8 @@ html [data-theme="dark"] {
   .weather-card {
     background-color: $color-background-dark;
     color: $color-text-dark;
+    box-shadow: $shadow-card-dark;
+
     &__description,
     &__pressure,
     &__humidity,
@@ -18,7 +20,7 @@ html [data-theme="dark"] {
 html .weather-card {
   max-width: inherit;
   margin: 20px auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: $shadow-card-light;
   border-radius: 8px;
   overflow: hidden;
 

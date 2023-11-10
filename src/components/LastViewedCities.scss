@@ -17,25 +17,25 @@ html [data-theme="dark"] {
 
 html .last-viewed-cities {
   margin-top: 20px;
-  background-color: #f7f7f7;
+  background-color: $color-background-form;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow-card-light;
   padding: 0;
   list-style: none;
 
   &__item {
     transition: background-color 0.3s ease;
     padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: $color-border;
 
     &:hover {
-      background-color: #eaeaea;
+      background-color: $color-background-hover;
     }
   }
 
   &__text {
     font-weight: bold;
-    color: #333;
+    color: $color-text-light;
     text-align: center;
   }
 
@@ -64,7 +64,7 @@ html .last-viewed-cities {
 
     &__item {
       width: calc(50% - 10px);
-      border-bottom: 1px solid #ddd;
+      border-bottom: $color-border;
 
       &:nth-child(odd) {
         margin-right: 20px;
