@@ -1,6 +1,6 @@
 import { WeatherResponse } from "../types/types";
 
-const API_KEY = "0da0940636dbc5f77079a84ddc063e38";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const fetchWeather = async (city: string): Promise<WeatherResponse> => {
   const response = await fetch(

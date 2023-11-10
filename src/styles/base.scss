@@ -1,0 +1,26 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include theme-properties("dark");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-color);
+}
+
+:root {
+  @include theme-properties("dark");
+}
+
+[data-theme="light"] {
+  @include theme-properties("light");
+}

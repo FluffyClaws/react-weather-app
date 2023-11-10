@@ -3,7 +3,7 @@ import { WeatherData } from "../types/types";
 import { fetchWeather } from "../api/weatherApi";
 
 const LOCAL_STORAGE_KEY = "lastViewedCities";
-const MAX_CITIES = 3;
+const MAX_CITIES = 4;
 
 const useWeather = () => {
   const [weather, setWeather] = useState<WeatherData | null>(null);

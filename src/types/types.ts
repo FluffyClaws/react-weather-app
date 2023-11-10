@@ -28,7 +28,8 @@ export interface WeatherData {
 }
 
 export interface WeatherCardProps {
-  weather: WeatherData;
+  weather?: WeatherData | null;
+  isLoading?: boolean;
 }
 export interface WeatherFormProps {
   onCitySubmit: (city: string) => void;
@@ -37,3 +38,4 @@ export type LastViewedCitiesProps = {
   onSelectCity: (city: string) => void;
   lastViewedCities: string[];
 };
+export type ThemeProperties = Record<string, string>;

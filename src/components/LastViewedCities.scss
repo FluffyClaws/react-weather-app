@@ -1,0 +1,78 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+html [data-theme="dark"] {
+  .last-viewed-cities {
+    background-color: $color-background-dark;
+    box-shadow: $shadow-card-dark;
+    &__text {
+      color: $color-text-dark;
+    }
+    &__item:hover {
+      border-radius: 4px;
+      background-color: $color-background-hover-dark;
+    }
+  }
+}
+
+html .last-viewed-cities {
+  margin-top: 20px;
+  background-color: $color-background-form;
+  border-radius: 4px;
+  box-shadow: $shadow-card-light;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    border-bottom: $color-border;
+
+    &:hover {
+      background-color: $color-background-hover;
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+    color: $color-text-light;
+    text-align: center;
+  }
+
+  @media (min-width: 480px) {
+    &__text {
+      text-align: left;
+    }
+    &_item {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+      width: calc(50% - 10px);
+      border-bottom: $color-border;
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+
+      &:nth-last-child(-n + 2) {
+        border-bottom: none;
+      }
+    }
+  }
+}

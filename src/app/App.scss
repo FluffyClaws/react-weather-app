@@ -1,0 +1,48 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.app-container {
+  @include flex-center(column, center);
+  padding: 20px;
+  @include responsive-width(600px);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+    @include flex-center(row, space-around);
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    @include flex-center(row, space-around);
+  }
+
+  .theme-switch {
+    .MuiSwitch-track {
+      background-color: $color-background-dark;
+    }
+    .MuiSwitch-thumb {
+      color: $color-background-dark;
+    }
+  }
+  &[data-theme="dark"] {
+    .theme-switch {
+      .MuiSwitch-track {
+        background-color: $color-background-light;
+      }
+      .MuiSwitch-thumb {
+        color: $color-background-light;
+      }
+      .MuiSwitch-colorPrimary.Mui-checked .MuiTouchRipple-child {
+        background-color: $color-background-light;
+      }
+
+      .MuiSwitch-colorPrimary.Mui-checked .MuiTouchRipple-child:after {
+        background-color: $color-background-light;
+      }
+
+      .Mui-focusVisible {
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+}
